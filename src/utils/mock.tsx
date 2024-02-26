@@ -1,5 +1,11 @@
 "use client"
-import { TooltipDemo } from "@/utils/Shad-cn/Tootlip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
 import { AccordionDemo } from "@/utils/Shad-cn/Accordion";
 import { AlertDemo } from "@/utils/Shad-cn/Alert";
 import { AlertDialogDemo } from "@/utils/Shad-cn/AlertDialog";
@@ -37,7 +43,8 @@ import { TableDemo } from "@/utils/Shad-cn/Table";
 import { TabsDemo } from "@/utils/Shad-cn/Tabs";
 import { TextareaDemo } from "@/utils/Shad-cn/TextArea";
 import { ToastDemo } from "@/utils/Shad-cn/Toast";
-import { ToggleDemo } from "@/utils/Shad-cn/Toggle";
+import { Toggle } from "@/components/ui/toggle"
+
 
 export const components = [
   {
@@ -506,7 +513,7 @@ export const components = [
     command: "npx shadcn-ui@latest add toggle",
     component: (
         <div>
-          <ToggleDemo />
+          <Toggle />
         </div>
       ),
     },
@@ -518,7 +525,14 @@ export const components = [
     command: "npx shadcn-ui@latest add tooltip", 
     component:  (
         <div>
-           <TooltipDemo />
+           <TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger>Hover</TooltipTrigger>
+    <TooltipContent>
+      <p>Add to library</p>
+    </TooltipContent>
+  </Tooltip>
+</TooltipProvider>
         </div>
       )
     

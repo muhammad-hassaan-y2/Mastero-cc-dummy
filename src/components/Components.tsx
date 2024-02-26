@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { components } from "@/utils/mock";
 import Link from "next/link";
